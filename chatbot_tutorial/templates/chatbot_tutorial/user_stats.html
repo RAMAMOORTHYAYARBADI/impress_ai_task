@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Statistics</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Stupid Count</th>
+                <th>Fat Count</th>
+                <th>Dumb Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user_stat in user_stats %}
+            <tr>
+                <td>{{ user_stat.user_id }}</td>
+                <td>{{ user_stat.user.username }}</td>
+                <td>{{ user_stat.stupid_count }}</td>
+                <td>{{ user_stat.fat_count }}</td>
+                <td>{{ user_stat.dumb_count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
